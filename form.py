@@ -1,0 +1,6 @@
+driver=webdriver.Chrome(executable_path="C\\chromedriver.exe")
+driver.get("https://rahulshettyacademy.com/angularpractice/")
+driver.find_element_by_name("name").send_keys("Alex")
+driver.find_element_by_name("email").send_keys("Alex@gmail.com")
+driver.find_element_by_xpath("//input[@id='exampleInputPassword1']").send_keys('1234')
+driver.find_element_by_css_selector('//[@id="exampleCheck1"]').click()
