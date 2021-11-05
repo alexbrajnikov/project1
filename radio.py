@@ -13,5 +13,8 @@ for checkbox in checkboxes:
         assert checkbox.is_selected()   
     
 radiobuttons = driver.find_elements_by_xpath("//*[@name='radioButton']")
-radiobuttons[2].click()
-assert radiobuttons[2].is_selected
+for radiobutton in radiobuttons:
+    if radiobuton.get_attribute("value") == "radio2":
+        radiobuttons.click()
+        assert radiobuttons.is_selected
+        break
