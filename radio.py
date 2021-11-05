@@ -3,7 +3,7 @@ import time
 
 driver=webdriver.Chrome()
 driver.get("https://rahulshettyacademy.com/AutomationPractice/")
-checkboxes = driver.find_elements_by_xpath('https://rahulshettyacademy.com/AutomationPractice/')
+checkboxes = driver.find_elements_by_xpath('//*[@name="radioButton"]')
 
 print(len(checkboxes))
 
