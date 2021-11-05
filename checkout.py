@@ -15,3 +15,6 @@ for button in buttons:
 driver.find_elements_by_xpath("//a[@class='cart-icon']").click()
 driver.find_elements_by_xpath('//button[text()="PROCEED TO CHECKOUT"]').click()
 driver.find_element_by_cssselector("input.promoCode").send_keys('rahulshettyacademy')
+driver.find_element_by_cssselector("button.promoBtn").click()
+mss=driver.find_element_by_cssselector(".promoInfo").text
+assert 'applied' in mss
