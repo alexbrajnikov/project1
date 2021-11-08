@@ -2,7 +2,7 @@
 from selenium import webdriver
 import time
 driver = webdriver.Chrome()
-driver.implicit_wait(20)
+driver.implicitly_wait(20)
 driver.get("https://rahulshettyacademy.com/seleniumPractise/")
 driver.find_element_by_xpath("// input[@type="search" ]").send_keys("ber")
 time.slep(5)
