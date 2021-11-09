@@ -31,3 +31,14 @@ for item_in_cart in items_in_cart:
 print(list1)
 
 assert list == list1
+
+driver.find_element(By.ID, "checkout").click()
+driver.find_element(By.ID, "first-name").send_keys("Alex")
+driver.find_element(By.ID, "last-name").send_keys("B")
+driver.find_element(By.ID, "postal-code").send_keys("11229")
+driver.find_element(By.ID, "continue").click()
+driver.find_element(By.ID, "finish").click()
+
+mss= driver.find_element(BY.CSS_SELECTOR, "h2.complete-header").text
+
+assert mss == "THANK YOU FOR YOUR ORDER"
