@@ -5,6 +5,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.ui import Select
 
+driver=webdriver.Chrome()
+
 select = Select(driver.find_element(By.XPATH, "//button[text()='Customer Login']"))
 select.select_by_value("2")
 driver.find_element(By.XPATH, "//button[@type='submit']").click()
