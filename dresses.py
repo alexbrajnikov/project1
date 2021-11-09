@@ -12,7 +12,7 @@ driver.implicitly_wait(20)
 driver.get("http://automationpractice.com/index.php")
 driver.find_element(By.NAME, "search_query").send_keys("dress"+ Keys.ENTER)
 dresses = driver.find_elements(By.XPATH, "//ul[@class='product_list grid row']/li//h5")
-foe dress in dresses:
+for dress in dresses:
     list.append(dress.text)
 print(list)
     
